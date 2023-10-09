@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi Step Form</title>
+  <link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+
+<body>
+  <section class="container">
+    <main>
+      <aside>
+        <section class="sidebar-section">
+          <section class="sidebar-number">
+            1
+          </section>
+          <section class="sidebar-info">
+            <p>Step 1</p>
+            <h2>Your info</h2>
+          </section>
+        </section>
+        <section class="sidebar-section">
+          <section class="sidebar-number">
+            2
+          </section>
+          <section class="sidebar-info">
+            <p>Step 2</p>
+            <h2>Select plan</h2>
+          </section>
+        </section>
+        <section class="sidebar-section">
+          <section class="sidebar-number">
+            3
+          </section>
+          <section class="sidebar-info">
+            <p>Step 3</p>
+            <h2>Add-ons</h2>
+          </section>
+        </section>
+        <section class="sidebar-section">
+          <section class="sidebar-number">
+            4
+          </section>
+          <section class="sidebar-info">
+            <p>Step 4</p>
+            <h2>Summary</h2>
+          </section>
+        </section>
+      </aside>
+      <section class="sidebar-section-info">
+        <section class="description">
+
+        </section>
+
+        <section class="middle-section">
+          <!-- for input container ---------- -->
+
+          <section class="input-container">
+            <section class="input-section ">
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="e.g. Stephen King">
+              <span class="Error-message"></span>
+            </section>
+            <section class="input-section">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="e.g. stephenking@lorem.com">
+              <span class="Error-message"></span>
+            </section>
+            <section class="input-section">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="e.g. +1 234 567 890">
+              <span class="Error-message"></span>
+            </section>
+          </section>
+
+          <!-- for plans container -------- -->
+          <section class="plans-container hide-container">
+            <section class="plans">
+              <section class="plan-section plan-selection">
+                <section class="image-section">
+                  <img src="./assets/images/icon-arcade.svg">
+                </section>
+                <section class="plan-info">
+                  <h3>Arcade</h3>
+                  <p data-price="9">$9/mo</p>
+                  <p class="additional-free">2 months free</p>
+                </section>
+              </section>
+              <section class="plan-section">
+                <section class="image-section">
+                  <img src="./assets/images/icon-advanced.svg">
+                </section>
+                <section class="plan-info">
+                  <h3>Advanced</h3>
+                  <p data-price="12">$12/mo</p>
+                  <p class="additional-free">2 months free</p>
+                </section>
+              </section>
+              <section class="plan-section">
+                <section class="image-section">
+                  <img src="./assets/images/icon-pro.svg">
+                </section>
+                <section class="plan-info">
+                  <h3>Pro</h3>
+                  <p data-price="15">$15/mo</p>
+                  <p class="additional-free">2 months free</p>
+                </section>
+              </section>
+
+            </section>
+            <section class="monthly-yearly-section">
+              <span>Monthly</span>
+              <section class="toggle">
+                <p class="switch"></p>
+              </section>
+              <span>Yearly</span>
+            </section>
+          </section>
+
+          <!-- for add-ons container ------------>
+
+          <section class="add-ons-container hide-container">
+            <section class="service-section">
+              <section class="service-input-info-section">
+                <input type="checkbox" name="service">
+                <section class="service-info">
+                  <h3>Online service</h3>
+                  <p>Access to multiplayer games</p>
+                </section>
+              </section>
+              <span class="service-price" data-price="1">+$1/mo</span>
+            </section>
+            <section class="service-section">
+              <section class="service-input-info-section">
+                <input type="checkbox" name="service">
+                <section class="service-info">
+                  <h3>Larger storage</h3>
+                  <p>Extra 1TB of cloud save</p>
+                </section>
+              </section>
+
+              <span class="service-price" data-price="2">+$2/mo</span>
+            </section>
+            <section class="service-section">
+              <section class="service-input-info-section">
+                <input type="checkbox" name="service">
+                <section class="service-info">
+                  <h3>Customizable Profile</h3>
+                  <p>Custom theme on your profile</p>
+                </section>
+              </section>
+              <span class="service-price" data-price="2">+$2/mo</span>
+            </section>
+          </section>
+
+
+          <!-- finishing up container ----------- -->
+
+          <section class="finishing-up-container hide-container">
+            <section class="total-summary-info-section">
+              <section class="monthly-yearly-summary-section">
+                <section class="info">
+                  <h3>Arcade(Monthly)</h3>
+                  <p id="change-plan">Change</p>
+                </section>
+                <span>$9/mo</span>
+              </section>
+              <section class="summary-service-section">
+              </section>
+            </section>
+            <section class="total-price-section">
+              <p>Total (per month)</p>
+              <span>$120/yr</span>
+            </section>
+          </section>
+
+          <!-- thankyou container -------------->
+
+          <section class="thankyou-container hide-container">
+            <section class="image">
+              <img src="./assets/images/icon-thank-you.svg" alt="thankyou">
+            </section>
+            <h1>Thank you!</h1>
+            <p>Thanks for confirming your subscription! We hope you have fun
+              using our platform. If you ever need support, please feel free to email us
+              at support@loremgaming.com.</p>
+          </section>
+
+        </section>
+        <section class="buttons">
+          <button id="back-step-btn" class="hide-button">Go Back</button>
+          <button id="next-step-btn">Next Step</button>
+        </section>
+      </section>
+    </main>
+  </section>
+  <script src="./script.js"></script>
+</body>
+
+</html>
